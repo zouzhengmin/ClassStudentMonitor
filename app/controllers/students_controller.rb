@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :number, :myclass_id)
+    params.require(:student).permit(:name, :number, :myclass_id, :is_monitor)
   end
 
   def find_student

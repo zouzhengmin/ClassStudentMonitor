@@ -3,6 +3,7 @@
 <%= form_for @student do |f| %>
   学生名称：<%= f.text_field :name %><br>
   学生号：<%= f.text_field :number %><br>
+  是否是班长：<%= f.select :is_monitor, Student::MONITOR.invert %><br>
   所在班级：<%= f.select :myclass_id, Myclass.pluck(:name, :id) %><br>
   <%= f.submit "提交" %>
 <% end %>

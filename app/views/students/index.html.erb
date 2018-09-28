@@ -6,6 +6,8 @@
     <td>所在班级</td>
     <td>学生号</td>
     <td>学生名字</td>
+    <td>班长</td>
+
   </tr>
   <% @students.each_with_index do |student,index| %>
   <tr>
@@ -13,6 +15,7 @@
     <td><%= link_to "#{student.myclass.name}", student.myclass %></td>
     <td><%= student.number %></td>
     <td><%= student.name %></td>
+    <td><%= student.is_monitor ? "班长" : "成员" %></td>
     <td><%= link_to "修改", edit_student_path(student) %></td>
     <td><%= link_to "删除", student, method: :delete %></td>
   </tr>
