@@ -6,6 +6,7 @@ class MyclassesController < ApplicationController
 
   def show
     @myclass = Myclass.find(params[:id])
+    @students = @myclass.students
   end
 
   def new

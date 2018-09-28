@@ -4,12 +4,17 @@
 <table>
   <tr>
     <td>序号</td>
+    <td>学生号</td>
     <td>班级成员</td>
   </tr>
-  
+  <% @students.each_with_index do |student,index| %>
   <tr>
-    <td></td>
-    <td></td>
+    <td><%= index + 1 %></td>
+    <td><%= student.number %></td>
+    <td><%= student.name %></td>
   </tr>
-
+  <% end %>
+  <!-- <tr>
+    <td><%= link_to "添加学生", new_student_path(:myclass_id => @myclass.id) %></td>
+  </tr> -->
 </table>

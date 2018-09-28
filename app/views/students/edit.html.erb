@@ -1,0 +1,12 @@
+<h1>修改学生</h1>
+
+<%= form_for @student do |f| %>
+  学生名称：<%= f.text_field :name %><br>
+  学生号：<%= f.text_field :number %><br>
+  所在班级：<%= f.select :myclass_id, Myclass.pluck(:name, :id) %><br>
+  <%= f.submit "提交" %>
+<% end %>
+
+
+<br>
+<%= link_to "返回学生主页", students_path %>

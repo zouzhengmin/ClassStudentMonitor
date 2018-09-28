@@ -1,6 +1,6 @@
-class Myclass < ApplicationRecord
+class Student < ApplicationRecord
 
-  has_many :students
+  belongs_to :myclass
   validates :name, presence: true, uniqueness: true
 
 end
