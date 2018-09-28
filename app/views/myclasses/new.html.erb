@@ -1,0 +1,10 @@
+<h1>新增班级</h1>
+
+<%= form_for @myclass do |f| %>
+  班级名称：<%= f.text_field :name %><br>
+  <%= f.submit "提交" %>
+<% end %>
+
+
+<br>
+<%= link_to "返回班级页", myclasses_path %>
